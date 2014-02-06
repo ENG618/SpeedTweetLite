@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C5725DC18A35DA700E58E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DB18A35DA700E58E1E /* Foundation.framework */; };
+		5C5725DE18A35DA700E58E1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */; };
+		5C5725E018A35DA700E58E1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DF18A35DA700E58E1E /* UIKit.framework */; };
+		5C5725E618A35DA700E58E1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C5725E418A35DA700E58E1E /* InfoPlist.strings */; };
+		5C5725E818A35DA700E58E1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5725E718A35DA700E58E1E /* main.m */; };
+		5C5725EC18A35DA700E58E1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5725EB18A35DA700E58E1E /* AppDelegate.m */; };
+		5C5725EF18A35DA700E58E1E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C5725ED18A35DA700E58E1E /* Main_iPhone.storyboard */; };
+		5C5725F218A35DA700E58E1E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C5725F018A35DA700E58E1E /* Main_iPad.storyboard */; };
+		5C5725F518A35DA700E58E1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5725F418A35DA700E58E1E /* ViewController.m */; };
+		5C5725F718A35DA700E58E1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C5725F618A35DA700E58E1E /* Images.xcassets */; };
+		5C5725FE18A35DA800E58E1E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725FD18A35DA800E58E1E /* XCTest.framework */; };
+		5C5725FF18A35DA800E58E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DB18A35DA700E58E1E /* Foundation.framework */; };
+		5C57260018A35DA800E58E1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DF18A35DA700E58E1E /* UIKit.framework */; };
+		5C57260818A35DA800E58E1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C57260618A35DA800E58E1E /* InfoPlist.strings */; };
+		5C57260A18A35DA800E58E1E /* SpeedTweetLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C57260918A35DA800E58E1E /* SpeedTweetLiteTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C57260118A35DA800E58E1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C5725D018A35DA700E58E1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C5725D718A35DA700E58E1E;
+			remoteInfo = SpeedTweetLite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C5725D818A35DA700E58E1E /* SpeedTweetLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTweetLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C5725DB18A35DA700E58E1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5C5725DF18A35DA700E58E1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5C5725E318A35DA700E58E1E /* SpeedTweetLite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpeedTweetLite-Info.plist"; sourceTree = "<group>"; };
+		5C5725E518A35DA700E58E1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5C5725E718A35DA700E58E1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C5725E918A35DA700E58E1E /* SpeedTweetLite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeedTweetLite-Prefix.pch"; sourceTree = "<group>"; };
+		5C5725EA18A35DA700E58E1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5C5725EB18A35DA700E58E1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C5725EE18A35DA700E58E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5C5725F118A35DA700E58E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		5C5725F318A35DA700E58E1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5C5725F418A35DA700E58E1E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C5725F618A35DA700E58E1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5C5725FC18A35DA800E58E1E /* SpeedTweetLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedTweetLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C5725FD18A35DA800E58E1E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5C57260518A35DA800E58E1E /* SpeedTweetLiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpeedTweetLiteTests-Info.plist"; sourceTree = "<group>"; };
+		5C57260718A35DA800E58E1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5C57260918A35DA800E58E1E /* SpeedTweetLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedTweetLiteTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C5725D518A35DA700E58E1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5725DE18A35DA700E58E1E /* CoreGraphics.framework in Frameworks */,
+				5C5725E018A35DA700E58E1E /* UIKit.framework in Frameworks */,
+				5C5725DC18A35DA700E58E1E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C5725F918A35DA800E58E1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5725FE18A35DA800E58E1E /* XCTest.framework in Frameworks */,
+				5C57260018A35DA800E58E1E /* UIKit.framework in Frameworks */,
+				5C5725FF18A35DA800E58E1E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C5725CF18A35DA700E58E1E = {
+			isa = PBXGroup;
+			children = (
+				5C5725E118A35DA700E58E1E /* SpeedTweetLite */,
+				5C57260318A35DA800E58E1E /* SpeedTweetLiteTests */,
+				5C5725DA18A35DA700E58E1E /* Frameworks */,
+				5C5725D918A35DA700E58E1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C5725D918A35DA700E58E1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C5725D818A35DA700E58E1E /* SpeedTweetLite.app */,
+				5C5725FC18A35DA800E58E1E /* SpeedTweetLiteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C5725DA18A35DA700E58E1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C5725DB18A35DA700E58E1E /* Foundation.framework */,
+				5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */,
+				5C5725DF18A35DA700E58E1E /* UIKit.framework */,
+				5C5725FD18A35DA800E58E1E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C5725E118A35DA700E58E1E /* SpeedTweetLite */ = {
+			isa = PBXGroup;
+			children = (
+				5C5725EA18A35DA700E58E1E /* AppDelegate.h */,
+				5C5725EB18A35DA700E58E1E /* AppDelegate.m */,
+				5C5725ED18A35DA700E58E1E /* Main_iPhone.storyboard */,
+				5C5725F018A35DA700E58E1E /* Main_iPad.storyboard */,
+				5C5725F318A35DA700E58E1E /* ViewController.h */,
+				5C5725F418A35DA700E58E1E /* ViewController.m */,
+				5C5725F618A35DA700E58E1E /* Images.xcassets */,
+				5C5725E218A35DA700E58E1E /* Supporting Files */,
+			);
+			path = SpeedTweetLite;
+			sourceTree = "<group>";
+		};
+		5C5725E218A35DA700E58E1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C5725E318A35DA700E58E1E /* SpeedTweetLite-Info.plist */,
+				5C5725E418A35DA700E58E1E /* InfoPlist.strings */,
+				5C5725E718A35DA700E58E1E /* main.m */,
+				5C5725E918A35DA700E58E1E /* SpeedTweetLite-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C57260318A35DA800E58E1E /* SpeedTweetLiteTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C57260918A35DA800E58E1E /* SpeedTweetLiteTests.m */,
+				5C57260418A35DA800E58E1E /* Supporting Files */,
+			);
+			path = SpeedTweetLiteTests;
+			sourceTree = "<group>";
+		};
+		5C57260418A35DA800E58E1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C57260518A35DA800E58E1E /* SpeedTweetLiteTests-Info.plist */,
+				5C57260618A35DA800E58E1E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C5725D718A35DA700E58E1E /* SpeedTweetLite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C57260D18A35DA800E58E1E /* Build configuration list for PBXNativeTarget "SpeedTweetLite" */;
+			buildPhases = (
+				5C5725D418A35DA700E58E1E /* Sources */,
+				5C5725D518A35DA700E58E1E /* Frameworks */,
+				5C5725D618A35DA700E58E1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeedTweetLite;
+			productName = SpeedTweetLite;
+			productReference = 5C5725D818A35DA700E58E1E /* SpeedTweetLite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C5725FB18A35DA800E58E1E /* SpeedTweetLiteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C57261018A35DA800E58E1E /* Build configuration list for PBXNativeTarget "SpeedTweetLiteTests" */;
+			buildPhases = (
+				5C5725F818A35DA800E58E1E /* Sources */,
+				5C5725F918A35DA800E58E1E /* Frameworks */,
+				5C5725FA18A35DA800E58E1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C57260218A35DA800E58E1E /* PBXTargetDependency */,
+			);
+			name = SpeedTweetLiteTests;
+			productName = SpeedTweetLiteTests;
+			productReference = 5C5725FC18A35DA800E58E1E /* SpeedTweetLiteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C5725D018A35DA700E58E1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Full Sail";
+				TargetAttributes = {
+					5C5725FB18A35DA800E58E1E = {
+						TestTargetID = 5C5725D718A35DA700E58E1E;
+					};
+				};
+			};
+			buildConfigurationList = 5C5725D318A35DA700E58E1E /* Build configuration list for PBXProject "SpeedTweetLite" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C5725CF18A35DA700E58E1E;
+			productRefGroup = 5C5725D918A35DA700E58E1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C5725D718A35DA700E58E1E /* SpeedTweetLite */,
+				5C5725FB18A35DA800E58E1E /* SpeedTweetLiteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C5725D618A35DA700E58E1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5725F218A35DA700E58E1E /* Main_iPad.storyboard in Resources */,
+				5C5725F718A35DA700E58E1E /* Images.xcassets in Resources */,
+				5C5725EF18A35DA700E58E1E /* Main_iPhone.storyboard in Resources */,
+				5C5725E618A35DA700E58E1E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C5725FA18A35DA800E58E1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C57260818A35DA800E58E1E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C5725D418A35DA700E58E1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5725F518A35DA700E58E1E /* ViewController.m in Sources */,
+				5C5725EC18A35DA700E58E1E /* AppDelegate.m in Sources */,
+				5C5725E818A35DA700E58E1E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C5725F818A35DA800E58E1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C57260A18A35DA800E58E1E /* SpeedTweetLiteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C57260218A35DA800E58E1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C5725D718A35DA700E58E1E /* SpeedTweetLite */;
+			targetProxy = 5C57260118A35DA800E58E1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C5725E418A35DA700E58E1E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C5725E518A35DA700E58E1E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5C5725ED18A35DA700E58E1E /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C5725EE18A35DA700E58E1E /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5C5725F018A35DA700E58E1E /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C5725F118A35DA700E58E1E /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5C57260618A35DA800E58E1E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C57260718A35DA800E58E1E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C57260B18A35DA800E58E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C57260C18A35DA800E58E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C57260E18A35DA800E58E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpeedTweetLite/SpeedTweetLite-Prefix.pch";
+				INFOPLIST_FILE = "SpeedTweetLite/SpeedTweetLite-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5C57260F18A35DA800E58E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpeedTweetLite/SpeedTweetLite-Prefix.pch";
+				INFOPLIST_FILE = "SpeedTweetLite/SpeedTweetLite-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5C57261118A35DA800E58E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpeedTweetLite.app/SpeedTweetLite";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpeedTweetLite/SpeedTweetLite-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpeedTweetLiteTests/SpeedTweetLiteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5C57261218A35DA800E58E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpeedTweetLite.app/SpeedTweetLite";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpeedTweetLite/SpeedTweetLite-Prefix.pch";
+				INFOPLIST_FILE = "SpeedTweetLiteTests/SpeedTweetLiteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C5725D318A35DA700E58E1E /* Build configuration list for PBXProject "SpeedTweetLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C57260B18A35DA800E58E1E /* Debug */,
+				5C57260C18A35DA800E58E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C57260D18A35DA800E58E1E /* Build configuration list for PBXNativeTarget "SpeedTweetLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C57260E18A35DA800E58E1E /* Debug */,
+				5C57260F18A35DA800E58E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5C57261018A35DA800E58E1E /* Build configuration list for PBXNativeTarget "SpeedTweetLiteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C57261118A35DA800E58E1E /* Debug */,
+				5C57261218A35DA800E58E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C5725D018A35DA700E58E1E /* Project object */;
+}
