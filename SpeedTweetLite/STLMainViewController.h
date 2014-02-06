@@ -11,7 +11,7 @@
 #import <Social/Social.h>
 #import "STLTweetCell.h"
 
-@interface STLMainViewController : UITableViewController
+@interface STLMainViewController : UIViewController
 {
     IBOutlet UITableView *tweetTableView;
     __weak IBOutlet UILabel *twitterText;
