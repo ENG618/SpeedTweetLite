@@ -98,8 +98,10 @@
     SLComposeViewController *composeVC = [ SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     if (composeVC != nil) {
         [composeVC setInitialText:@"Sent from STL"];
+        //[composeVC addImage:[UIImage imageNamed:@"profilePic.png"]];
         
         [self presentViewController:composeVC animated:YES completion:nil];
+        
     }
 }
 

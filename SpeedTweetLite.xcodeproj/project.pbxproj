@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C1BE9B418A4861B00218596 /* TwitterCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1BE9B318A4861B00218596 /* TwitterCellView.xib */; };
+		5C1BE9BA18A4A20B00218596 /* profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1BE9B918A4A20B00218596 /* profilePic.png */; };
 		5C5725DC18A35DA700E58E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DB18A35DA700E58E1E /* Foundation.framework */; };
 		5C5725DE18A35DA700E58E1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */; };
 		5C5725E018A35DA700E58E1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DF18A35DA700E58E1E /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		5C1BE9B318A4861B00218596 /* TwitterCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterCellView.xib; sourceTree = "<group>"; };
+		5C1BE9B918A4A20B00218596 /* profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profilePic.png; path = ../../profilePic.png; sourceTree = "<group>"; };
 		5C5725D818A35DA700E58E1E /* SpeedTweetLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTweetLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5725DB18A35DA700E58E1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +153,7 @@
 		5C5725E118A35DA700E58E1E /* SpeedTweetLite */ = {
 			isa = PBXGroup;
 			children = (
+				5C1BE9B918A4A20B00218596 /* profilePic.png */,
 				5C5725EA18A35DA700E58E1E /* AppDelegate.h */,
 				5C5725EB18A35DA700E58E1E /* AppDelegate.m */,
 				5C1BE9B618A4879E00218596 /* Tweet */,
@@ -268,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1BE9BA18A4A20B00218596 /* profilePic.png in Resources */,
 				5C5725F218A35DA700E58E1E /* Main_iPad.storyboard in Resources */,
 				5C5725F718A35DA700E58E1E /* Images.xcassets in Resources */,
 				5C1BE9B418A4861B00218596 /* TwitterCellView.xib in Resources */,
