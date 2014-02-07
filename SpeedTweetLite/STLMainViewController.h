@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
+#import "STLTweetDetailViewController.h"
 #import "STLTweetCell.h"
 
 @interface STLMainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
@@ -21,5 +22,6 @@
     NSArray *twitterFeed;
     
 }
+- (IBAction)newTweet:(id)sender;
 
 @end
