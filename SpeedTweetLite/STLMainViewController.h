@@ -11,11 +11,11 @@
 #import <Social/Social.h>
 #import "STLTweetCell.h"
 
-@interface STLMainViewController : UIViewController
+@interface STLMainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView *tweetTableView;
-    __weak IBOutlet UILabel *twitterText;
-    __weak IBOutlet UILabel *twitterUsername;
+//    __weak IBOutlet UILabel *twitterText;
+//    __weak IBOutlet UILabel *twitterUsername;
     
     
     NSArray *twitterFeed;

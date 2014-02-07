@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1BE9B418A4861B00218596 /* TwitterCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1BE9B318A4861B00218596 /* TwitterCellView.xib */; };
 		5C5725DC18A35DA700E58E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DB18A35DA700E58E1E /* Foundation.framework */; };
 		5C5725DE18A35DA700E58E1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */; };
 		5C5725E018A35DA700E58E1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DF18A35DA700E58E1E /* UIKit.framework */; };
@@ -25,7 +26,7 @@
 		5C57261E18A36A3800E58E1E /* STLTweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */; };
 		5C57262518A36D3200E58E1E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C57262418A36D3200E58E1E /* Accounts.framework */; };
 		5C57262718A36D3C00E58E1E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C57262618A36D3C00E58E1E /* Social.framework */; };
-		5C57262A18A375A700E58E1E /* STLTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C57262918A375A700E58E1E /* STLTweetCell.m */; };
+		5C57262D18A37CFA00E58E1E /* STLTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C57262C18A37CFA00E58E1E /* STLTweetCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C1BE9B318A4861B00218596 /* TwitterCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterCellView.xib; sourceTree = "<group>"; };
 		5C5725D818A35DA700E58E1E /* SpeedTweetLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTweetLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5725DB18A35DA700E58E1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,8 +65,8 @@
 		5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweetDetailViewController.m; sourceTree = "<group>"; };
 		5C57262418A36D3200E58E1E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		5C57262618A36D3C00E58E1E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		5C57262818A375A700E58E1E /* STLTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLTweetCell.h; sourceTree = "<group>"; };
-		5C57262918A375A700E58E1E /* STLTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweetCell.m; sourceTree = "<group>"; };
+		5C57262B18A37CFA00E58E1E /* STLTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLTweetCell.h; sourceTree = "<group>"; };
+		5C57262C18A37CFA00E58E1E /* STLTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweetCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C1BE9B518A4878600218596 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C57262B18A37CFA00E58E1E /* STLTweetCell.h */,
+				5C57262C18A37CFA00E58E1E /* STLTweetCell.m */,
+				5C1BE9B318A4861B00218596 /* TwitterCellView.xib */,
+			);
+			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		5C1BE9B618A4879E00218596 /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
+				5C57261618A368F400E58E1E /* STLMainViewController.h */,
+				5C57261718A368F400E58E1E /* STLMainViewController.m */,
+				5C57261C18A36A3800E58E1E /* STLTweetDetailViewController.h */,
+				5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */,
+			);
+			name = Tweet;
+			sourceTree = "<group>";
+		};
 		5C5725CF18A35DA700E58E1E = {
 			isa = PBXGroup;
 			children = (
@@ -130,14 +153,10 @@
 			children = (
 				5C5725EA18A35DA700E58E1E /* AppDelegate.h */,
 				5C5725EB18A35DA700E58E1E /* AppDelegate.m */,
-				5C57261618A368F400E58E1E /* STLMainViewController.h */,
-				5C57261718A368F400E58E1E /* STLMainViewController.m */,
-				5C57261C18A36A3800E58E1E /* STLTweetDetailViewController.h */,
-				5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */,
+				5C1BE9B618A4879E00218596 /* Tweet */,
 				5C5725ED18A35DA700E58E1E /* Main_iPhone.storyboard */,
 				5C5725F018A35DA700E58E1E /* Main_iPad.storyboard */,
-				5C57262818A375A700E58E1E /* STLTweetCell.h */,
-				5C57262918A375A700E58E1E /* STLTweetCell.m */,
+				5C1BE9B518A4878600218596 /* Custom Cell */,
 				5C5725F618A35DA700E58E1E /* Images.xcassets */,
 				5C5725E218A35DA700E58E1E /* Supporting Files */,
 			);
@@ -251,6 +270,7 @@
 			files = (
 				5C5725F218A35DA700E58E1E /* Main_iPad.storyboard in Resources */,
 				5C5725F718A35DA700E58E1E /* Images.xcassets in Resources */,
+				5C1BE9B418A4861B00218596 /* TwitterCellView.xib in Resources */,
 				5C5725EF18A35DA700E58E1E /* Main_iPhone.storyboard in Resources */,
 				5C5725E618A35DA700E58E1E /* InfoPlist.strings in Resources */,
 			);
@@ -271,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C57262A18A375A700E58E1E /* STLTweetCell.m in Sources */,
+				5C57262D18A37CFA00E58E1E /* STLTweetCell.m in Sources */,
 				5C57261818A368F400E58E1E /* STLMainViewController.m in Sources */,
 				5C5725EC18A35DA700E58E1E /* AppDelegate.m in Sources */,
 				5C5725E818A35DA700E58E1E /* main.m in Sources */,
@@ -494,6 +514,7 @@
 				5C57260F18A35DA800E58E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C57261018A35DA800E58E1E /* Build configuration list for PBXNativeTarget "SpeedTweetLiteTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +523,7 @@
 				5C57261218A35DA800E58E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

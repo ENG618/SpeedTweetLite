@@ -6,8 +6,17 @@
 //  Copyright (c) 2014 Full Sail. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface STLTweetCell : NSObject
+@interface STLTweetCell : UITableViewCell
+{
+    IBOutlet UILabel *twitterText;
+    IBOutlet UILabel *twitterUsername;
+}
+
+- (void)refreshCell;
+
+@property (nonatomic, strong) NSString *tweetText;
+@property (nonatomic, strong) NSString *username;
 
 @end
