@@ -24,12 +24,14 @@
     
 }
 
+@property UIImage *profilePic;
 @property NSString *tweetText;
 @property NSString *tweetDate;
 @property NSString *tweetedBy;
 
 -(void)showLoading;
 -(void)dismissLoading;
+-(void)accessTwitter;
 
 - (IBAction)newTweet:(id)sender;
 - (IBAction)refresh:(id)sender;

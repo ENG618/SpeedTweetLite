@@ -14,13 +14,26 @@
 
 @implementation STLMainViewController
 
-@synthesize tweetText, tweetDate, tweetedBy;
+//synthasize variables
+@synthesize profilePic, tweetText, tweetDate, tweetedBy;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    [self accessTwitter];
+    
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)accessTwitter
+{
     //Register custom cell for tableview
     UINib *twitterCellNib = [UINib nibWithNibName:@"TwitterCellView" bundle:nil];
     if (twitterCellNib != nil) {
@@ -49,7 +62,7 @@
                             //Obtaining user time line
                             //NSString *userTimeString  = @"https://api.twitter.com/1.1/statuses/user_timeline.json";
                             
-                            NSString *userTimeString = [NSString stringWithFormat:@"%@?%@&%@", @"https://api.twitter.com/1.1/statuses/user_timeline.json", @"screen_name=garciaericn", @"count=3"];
+                            NSString *userTimeString = [NSString stringWithFormat:@"%@?%@", @"https://api.twitter.com/1.1/statuses/user_timeline.json", @"screen_name=garciaericn"];
                             
                             //Request data from Twitter
                             SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:userTimeString ] parameters:nil];
@@ -84,12 +97,6 @@
         }
     }
     
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 -(void)showLoading
