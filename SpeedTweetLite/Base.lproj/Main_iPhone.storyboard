@@ -161,9 +161,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="P6n-gu-HgM">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Refresh" id="uLt-Lj-Dx8">
+                                    <connections>
+                                        <action selector="refresh:" destination="7sc-j6-CGo" id="2ue-Sb-JrB"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TweetCell" textLabel="Z1j-QD-IiC" detailTextLabel="BhI-iI-0I1" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="97l-CG-TzH">
-                                <rect key="frame" x="0.0" y="86" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97l-CG-TzH" id="r6f-cJ-tv3">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
@@ -195,6 +206,7 @@
                             <outlet property="delegate" destination="7sc-j6-CGo" id="FFI-8r-qR1"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Speed Tweet Lite" id="dgq-2S-o0m">
                         <barButtonItem key="leftBarButtonItem" title="Profile" id="ewo-HM-PPV">
                             <connections>
@@ -208,6 +220,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tweetTableView" destination="tdg-NU-LPb" id="sdd-El-BM5"/>
                     </connections>

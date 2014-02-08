@@ -30,11 +30,11 @@
 {
     [super viewDidLoad];
     
-    
-    refreshControl = [[UIRefreshControl alloc] init];
+
+    self.refreshControl = [[UIRefreshControl alloc] init];
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [refreshControl addTarget:self action:@selector(accessTwitter) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl = refreshControl;
+    //self.refreshControl = refreshControl;
     
     [self accessTwitter];
     
@@ -46,6 +46,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)stopRefresh
+{
+    [self.refreshControl endRefreshing];
 }
 
 -(void)accessTwitter
@@ -116,7 +121,7 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     //Loading alert view
     loadingAlert = [[UIAlertView alloc] initWithTitle:@"Loading..."
-                                              message:@"\n\n"
+                                              message:@"Please wait while we gather your tweets."
                                              delegate:self
                                     cancelButtonTitle:nil
                                     otherButtonTitles:nil, nil];
@@ -154,6 +159,9 @@
         [self presentViewController:composeVC animated:YES completion:nil];
         
     }
+}
+- (IBAction)refresh:(id)sender {
+    [self accessTwitter];
 }
 
 #pragma mark - Table view data source
