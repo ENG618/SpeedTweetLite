@@ -31,6 +31,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.tweet.text = self.t;
+    self.tweetTime.text = self.tTime;
+    self.tweetedBy.text = [NSString stringWithFormat:@"Post By: %@", self.tBy];
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,4 +10,9 @@
 
 @interface STLProfileViewController : UIViewController
 
+@property (nonatomic) NSString *userName;
+@property (nonatomic) NSString *userDescription;
+@property (nonatomic) NSString *userFollowers;
+@property (nonatomic) NSString *userFriends;
+
 @end

@@ -13,5 +13,8 @@
     
 }
 
+@property (nonatomic) NSString *t;
+@property (nonatomic) NSString *tTime;
+@property (nonatomic) NSString *tBy;
 
 @end

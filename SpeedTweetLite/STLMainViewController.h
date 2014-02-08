@@ -12,12 +12,9 @@
 #import "STLTweetDetailViewController.h"
 #import "STLTweet.h"
 
-@interface STLMainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface STLMainViewController : UITableViewController
 {
     IBOutlet UITableView *tweetTableView;
-//    __weak IBOutlet UILabel *twitterText;
-//    __weak IBOutlet UILabel *twitterUsername;
-    
     
     UIAlertView *loadingAlert;
     NSArray *twitterFeed;
@@ -33,8 +30,5 @@
 -(void)showLoading;
 -(void)dismissLoading;
 -(void)accessTwitter;
-
-- (IBAction)newTweet:(id)sender;
-- (IBAction)refresh:(id)sender;
 
 @end

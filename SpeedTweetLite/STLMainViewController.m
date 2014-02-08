@@ -15,14 +15,20 @@
 @implementation STLMainViewController
 
 //synthasize variables
-@synthesize pic, tweetText, tweetDate, tweetedBy;
+@synthesize refreshControl, pic, tweetText, tweetDate, tweetedBy;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    
+    refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl = refreshControl;
+    
     [self accessTwitter];
+    
+
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -171,16 +177,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"testCell";
+    static NSString *CellIdentifier = @"TweetCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     if (cell != nil) {
         
         // Configure the cell...
         //Obtain data from a single tweet
         NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
+        NSLog(@"This is the tweetDictionary: %@", tweetDictionary);
         if (tweetDictionary != nil) {
             //Set text lable to tweet
-            cell.textLabel.text = [tweetDictionary valueForKey:@"text"];
+            tweetText = [tweetDictionary valueForKey:@"text"];
+            cell.textLabel.text = tweetText;
+            //Set detailText to time of tweet
+            tweetDate = [tweetDictionary valueForKey:@"created_at"];
+            cell.detailTextLabel.text = tweetDate;
             
             //Obtain user data
             NSDictionary *userDictionary = [tweetDictionary objectForKey:@"user"];
@@ -192,8 +203,8 @@
                 //Set icon image
                 pic = [UIImage imageWithData:imageData];
                 cell.imageView.image = pic;
-                //Set detailText to time of tweet
-                cell.detailTextLabel.text = [tweetDictionary valueForKey:@"created_at"];
+                tweetedBy = [userDictionary valueForKey:@"name"];
+
             }
             
             //[cell refreshCell];
@@ -205,16 +216,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    tweetText = nil;
     //Obtain data from a single tweet
     NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
-    
     tweetText = [tweetDictionary valueForKey:@"text"];
-    //tweetDate
+    
     
     //Printing selected tweet info to console
     NSLog(@"This is the one you clicked on: %@", [tweetDictionary description]);
     
-    [self performSegueWithIdentifier:@"tweetDescription" sender:self];
+//    [self performSegueWithIdentifier:@"tweetDescription" sender:self];
 }
 
 /*
@@ -262,9 +273,19 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    STLTweetDetailViewController *tdvc = [segue destinationViewController];
+//    NSIndexPath *path = [self.]
+//    //Obtain data from a single tweet
+//    NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
+//    tweetText = [tweetDictionary valueForKey:@"text"];
     
     if ([segue.identifier isEqualToString:@"tweetDescription"]) {
+        // Get the new view controller using [segue destinationViewController].
+        STLTweetDetailViewController *tdvc = [segue destinationViewController];
+        //Obtain path for selected row
+        tdvc.t = tweetText;
+        tdvc.tTime = tweetDate;
+        tdvc.tBy = tweetedBy;
+        
         
     }
     // Get the new view controller using [segue destinationViewController].
@@ -272,16 +293,5 @@
     
     
 }
-
-
-- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-{
-    NSString *tweetDescription = @"tweetDescription";
-    if (identifier == tweetDescription) {
-        //STLTweetDetailViewController *tdvc =
-    };
-    
-}
-
 
 @end
