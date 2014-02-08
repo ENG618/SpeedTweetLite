@@ -273,10 +273,10 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    NSIndexPath *path = [self.]
-//    //Obtain data from a single tweet
-//    NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
-//    tweetText = [tweetDictionary valueForKey:@"text"];
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    //Obtain data from a single tweet
+    NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:path.row];
+    tweetText = [tweetDictionary valueForKey:@"text"];
     
     if ([segue.identifier isEqualToString:@"tweetDescription"]) {
         // Get the new view controller using [segue destinationViewController].
