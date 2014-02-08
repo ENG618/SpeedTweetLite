@@ -75,7 +75,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Speed Tweet Lite" id="nVb-RO-ruq">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="ewo-HM-PPV">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="ewo-HM-PPV">
                             <connections>
                                 <action selector="refresh:" destination="HA0-S7-Ht9" id="MyZ-9s-17X"/>
                                 <segue destination="8aD-J2-2gp" kind="push" id="0qy-Nh-pDq"/>

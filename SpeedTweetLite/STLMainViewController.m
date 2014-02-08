@@ -144,7 +144,7 @@
 {
     //Show loading alertView
     [self showLoading];
-
+    
     //Refresh code goes here
     
     //Show loading alertView
@@ -174,29 +174,30 @@
     static NSString *CellIdentifier = @"testCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     if (cell != nil) {
+        
         // Configure the cell...
-        
-        
         //Obtain data from a single tweet
         NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
-        //Set text lable to tweet
-        cell.textLabel.text = [tweetDictionary valueForKey:@"text"];
-        
-        //Obtain user data
-        NSDictionary *userDictionary = [tweetDictionary objectForKey:@"user"];
-        if (userDictionary != nil) {
-            NSString *urlString = [userDictionary valueForKey:@"profile_image_url"];
-            NSURL *urlImage = [NSURL URLWithString:urlString];
-            NSData *imageData = [NSData dataWithContentsOfURL:urlImage];
-            self.pic = [UIImage imageWithData:imageData];
-            //cell.pic = self.pic;
-            cell.imageView.image = self.pic;
-            //Set text labe to username
-            cell.detailTextLabel.text = [userDictionary valueForKey:@"name"];
+        if (tweetDictionary != nil) {
+            //Set text lable to tweet
+            cell.textLabel.text = [tweetDictionary valueForKey:@"text"];
+            
+            //Obtain user data
+            NSDictionary *userDictionary = [tweetDictionary objectForKey:@"user"];
+            if (userDictionary != nil) {
+                //Obtain profile image
+                NSString *urlString = [userDictionary valueForKey:@"profile_image_url"];
+                NSURL *urlImage = [NSURL URLWithString:urlString];
+                NSData *imageData = [NSData dataWithContentsOfURL:urlImage];
+                //Set icon image
+                pic = [UIImage imageWithData:imageData];
+                cell.imageView.image = pic;
+                //Set detailText to time of tweet
+                cell.detailTextLabel.text = [tweetDictionary valueForKey:@"created_at"];
+            }
+            
+            //[cell refreshCell];
         }
-        
-        //[cell refreshCell];
-        
         return cell;
     }
     return nil;
@@ -215,47 +216,47 @@
     
     [self performSegueWithIdentifier:@"tweetDescription" sender:self];
 }
-     
-    /*
-     // Override to support conditional editing of the table view.
-     - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-     {
-     // Return NO if you do not want the specified item to be editable.
-     return YES;
-     }
-     */
-     
-    /*
-     // Override to support editing the table view.
-     - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-     {
-     if (editingStyle == UITableViewCellEditingStyleDelete) {
-     // Delete the row from the data source
-     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-     }
-     else if (editingStyle == UITableViewCellEditingStyleInsert) {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-     
-    /*
-     // Override to support rearranging the table view.
-     - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-     {
-     }
-     */
-     
-    /*
-     // Override to support conditional rearranging of the table view.
-     - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-     {
-     // Return NO if you do not want the item to be re-orderable.
-     return YES;
-     }
-     */
-     
-     
+
+/*
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
+
+/*
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -266,8 +267,8 @@
     if ([segue.identifier isEqualToString:@"tweetDescription"]) {
         
     }
-     // Get the new view controller using [segue destinationViewController].
-
+    // Get the new view controller using [segue destinationViewController].
+    
     
     
 }
