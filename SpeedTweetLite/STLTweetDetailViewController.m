@@ -9,12 +9,14 @@
 #import "STLTweetDetailViewController.h"
 
 @interface STLTweetDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *tweet;
+@property (weak, nonatomic) IBOutlet UILabel *tweetTime;
+@property (weak, nonatomic) IBOutlet UILabel *tweetedBy;
 
 @end
 
 @implementation STLTweetDetailViewController
 
-@synthesize tText, tDate, tBy;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

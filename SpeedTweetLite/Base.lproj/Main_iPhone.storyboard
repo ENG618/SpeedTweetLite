@@ -149,9 +149,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="IRP-Lv-fv3"/>
                     <connections>
-                        <outlet property="tweet" destination="vw9-8A-3TC" id="Hji-as-OKo"/>
-                        <outlet property="tweetTime" destination="l4D-ta-2eK" id="3Qs-ce-851"/>
-                        <outlet property="tweetedBy" destination="c1p-ao-jPG" id="zHv-gh-JMR"/>
+                        <outlet property="tweet" destination="vw9-8A-3TC" id="efP-cP-hWP"/>
+                        <outlet property="tweetTime" destination="l4D-ta-2eK" id="y4H-oa-2XH"/>
+                        <outlet property="tweetedBy" destination="c1p-ao-jPG" id="95e-TR-H9c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0S-SF-Bbb" userLabel="First Responder" sceneMemberID="firstResponder"/>

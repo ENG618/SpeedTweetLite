@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C1BE9B418A4861B00218596 /* TwitterCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1BE9B318A4861B00218596 /* TwitterCellView.xib */; };
 		5C1BE9BA18A4A20B00218596 /* profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1BE9B918A4A20B00218596 /* profilePic.png */; };
 		5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BC18A60BBD00218596 /* STLTweet.m */; };
 		5C1BE9C018A60DCC00218596 /* STLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */; };
@@ -29,7 +28,6 @@
 		5C57261E18A36A3800E58E1E /* STLTweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */; };
 		5C57262518A36D3200E58E1E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C57262418A36D3200E58E1E /* Accounts.framework */; };
 		5C57262718A36D3C00E58E1E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C57262618A36D3C00E58E1E /* Social.framework */; };
-		5C57262D18A37CFA00E58E1E /* STLTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C57262C18A37CFA00E58E1E /* STLTweetCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C1BE9B318A4861B00218596 /* TwitterCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterCellView.xib; sourceTree = "<group>"; };
 		5C1BE9B918A4A20B00218596 /* profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profilePic.png; path = ../../profilePic.png; sourceTree = "<group>"; };
 		5C1BE9BB18A60BBD00218596 /* STLTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLTweet.h; sourceTree = "<group>"; };
 		5C1BE9BC18A60BBD00218596 /* STLTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweet.m; sourceTree = "<group>"; };
@@ -73,8 +70,6 @@
 		5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweetDetailViewController.m; sourceTree = "<group>"; };
 		5C57262418A36D3200E58E1E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		5C57262618A36D3C00E58E1E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		5C57262B18A37CFA00E58E1E /* STLTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLTweetCell.h; sourceTree = "<group>"; };
-		5C57262C18A37CFA00E58E1E /* STLTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweetCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +101,6 @@
 		5C1BE9B518A4878600218596 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5C57262B18A37CFA00E58E1E /* STLTweetCell.h */,
-				5C57262C18A37CFA00E58E1E /* STLTweetCell.m */,
-				5C1BE9B318A4861B00218596 /* TwitterCellView.xib */,
 				5C1BE9BB18A60BBD00218596 /* STLTweet.h */,
 				5C1BE9BC18A60BBD00218596 /* STLTweet.m */,
 			);
@@ -284,7 +276,6 @@
 				5C1BE9BA18A4A20B00218596 /* profilePic.png in Resources */,
 				5C5725F218A35DA700E58E1E /* Main_iPad.storyboard in Resources */,
 				5C5725F718A35DA700E58E1E /* Images.xcassets in Resources */,
-				5C1BE9B418A4861B00218596 /* TwitterCellView.xib in Resources */,
 				5C5725EF18A35DA700E58E1E /* Main_iPhone.storyboard in Resources */,
 				5C5725E618A35DA700E58E1E /* InfoPlist.strings in Resources */,
 			);
@@ -305,7 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C57262D18A37CFA00E58E1E /* STLTweetCell.m in Sources */,
 				5C57261818A368F400E58E1E /* STLMainViewController.m in Sources */,
 				5C5725EC18A35DA700E58E1E /* AppDelegate.m in Sources */,
 				5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */,

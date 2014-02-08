@@ -10,15 +10,8 @@
 
 @interface STLTweetDetailViewController : UIViewController
 {
-    __weak IBOutlet UILabel *tweet;
-    __weak IBOutlet UILabel *tweetTime;
-    __weak IBOutlet UILabel *tweetedBy;
     
 }
 
-
-@property NSString *tweet;
-@property NSString *tweetTime;
-@property NSString *tweetedBy;
 
 @end

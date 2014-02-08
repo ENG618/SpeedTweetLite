@@ -10,7 +10,7 @@
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 #import "STLTweetDetailViewController.h"
-#import "STLTweetCell.h"
+#import "STLTweet.h"
 
 @interface STLMainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {

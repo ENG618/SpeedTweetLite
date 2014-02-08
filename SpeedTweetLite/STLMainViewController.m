@@ -34,11 +34,6 @@
 
 -(void)accessTwitter
 {
-    //Register custom cell for tableview
-    UINib *twitterCellNib = [UINib nibWithNibName:@"TwitterCellView" bundle:nil];
-    if (twitterCellNib != nil) {
-        [tweetTableView registerNib:twitterCellNib forCellReuseIdentifier:@"TwitterCell"];
-    }
     //Show loading alertview
     [self showLoading];
     
@@ -178,7 +173,6 @@
 {
     static NSString *CellIdentifier = @"testCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    //STLTweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     if (cell != nil) {
         // Configure the cell...
         
@@ -186,7 +180,6 @@
         //Obtain data from a single tweet
         NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
         //Set text lable to tweet
-        //cell.tweetText = [tweetDictionary valueForKey:@"text"];
         cell.textLabel.text = [tweetDictionary valueForKey:@"text"];
         
         //Obtain user data
@@ -199,7 +192,6 @@
             //cell.pic = self.pic;
             cell.imageView.image = self.pic;
             //Set text labe to username
-            //cell.username = [userDictionary valueForKey:@"name"];
             cell.detailTextLabel.text = [userDictionary valueForKey:@"name"];
         }
         
