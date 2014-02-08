@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C1BE9B418A4861B00218596 /* TwitterCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1BE9B318A4861B00218596 /* TwitterCellView.xib */; };
 		5C1BE9BA18A4A20B00218596 /* profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1BE9B918A4A20B00218596 /* profilePic.png */; };
+		5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BC18A60BBD00218596 /* STLTweet.m */; };
+		5C1BE9C018A60DCC00218596 /* STLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */; };
 		5C5725DC18A35DA700E58E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DB18A35DA700E58E1E /* Foundation.framework */; };
 		5C5725DE18A35DA700E58E1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */; };
 		5C5725E018A35DA700E58E1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DF18A35DA700E58E1E /* UIKit.framework */; };
@@ -43,6 +45,10 @@
 /* Begin PBXFileReference section */
 		5C1BE9B318A4861B00218596 /* TwitterCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterCellView.xib; sourceTree = "<group>"; };
 		5C1BE9B918A4A20B00218596 /* profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profilePic.png; path = ../../profilePic.png; sourceTree = "<group>"; };
+		5C1BE9BB18A60BBD00218596 /* STLTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLTweet.h; sourceTree = "<group>"; };
+		5C1BE9BC18A60BBD00218596 /* STLTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweet.m; sourceTree = "<group>"; };
+		5C1BE9BE18A60DCC00218596 /* STLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLProfileViewController.h; sourceTree = "<group>"; };
+		5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLProfileViewController.m; sourceTree = "<group>"; };
 		5C5725D818A35DA700E58E1E /* SpeedTweetLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTweetLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5725DB18A35DA700E58E1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C5725DD18A35DA700E58E1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,19 +109,23 @@
 				5C57262B18A37CFA00E58E1E /* STLTweetCell.h */,
 				5C57262C18A37CFA00E58E1E /* STLTweetCell.m */,
 				5C1BE9B318A4861B00218596 /* TwitterCellView.xib */,
+				5C1BE9BB18A60BBD00218596 /* STLTweet.h */,
+				5C1BE9BC18A60BBD00218596 /* STLTweet.m */,
 			);
 			name = "Custom Cell";
 			sourceTree = "<group>";
 		};
-		5C1BE9B618A4879E00218596 /* Tweet */ = {
+		5C1BE9B618A4879E00218596 /* Speed Tweet Lite */ = {
 			isa = PBXGroup;
 			children = (
 				5C57261618A368F400E58E1E /* STLMainViewController.h */,
 				5C57261718A368F400E58E1E /* STLMainViewController.m */,
 				5C57261C18A36A3800E58E1E /* STLTweetDetailViewController.h */,
 				5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */,
+				5C1BE9BE18A60DCC00218596 /* STLProfileViewController.h */,
+				5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */,
 			);
-			name = Tweet;
+			name = "Speed Tweet Lite";
 			sourceTree = "<group>";
 		};
 		5C5725CF18A35DA700E58E1E = {
@@ -156,7 +166,7 @@
 				5C1BE9B918A4A20B00218596 /* profilePic.png */,
 				5C5725EA18A35DA700E58E1E /* AppDelegate.h */,
 				5C5725EB18A35DA700E58E1E /* AppDelegate.m */,
-				5C1BE9B618A4879E00218596 /* Tweet */,
+				5C1BE9B618A4879E00218596 /* Speed Tweet Lite */,
 				5C5725ED18A35DA700E58E1E /* Main_iPhone.storyboard */,
 				5C5725F018A35DA700E58E1E /* Main_iPad.storyboard */,
 				5C1BE9B518A4878600218596 /* Custom Cell */,
@@ -298,6 +308,8 @@
 				5C57262D18A37CFA00E58E1E /* STLTweetCell.m in Sources */,
 				5C57261818A368F400E58E1E /* STLMainViewController.m in Sources */,
 				5C5725EC18A35DA700E58E1E /* AppDelegate.m in Sources */,
+				5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */,
+				5C1BE9C018A60DCC00218596 /* STLProfileViewController.m in Sources */,
 				5C5725E818A35DA700E58E1E /* main.m in Sources */,
 				5C57261E18A36A3800E58E1E /* STLTweetDetailViewController.m in Sources */,
 			);

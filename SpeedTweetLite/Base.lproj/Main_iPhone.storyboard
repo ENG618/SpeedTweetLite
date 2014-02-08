@@ -78,6 +78,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="ewo-HM-PPV">
                             <connections>
                                 <action selector="refresh:" destination="HA0-S7-Ht9" id="MyZ-9s-17X"/>
+                                <segue destination="8aD-J2-2gp" kind="push" id="0qy-Nh-pDq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BuQ-0a-K8S">
@@ -94,10 +95,29 @@
             </objects>
             <point key="canvasLocation" x="1616" y="88"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
+        <scene sceneID="P96-KB-I1x">
+            <objects>
+                <viewController id="8aD-J2-2gp" customClass="STLProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V22-rc-hPv"/>
+                        <viewControllerLayoutGuide type="bottom" id="0yj-me-0ED"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LDh-nL-pAY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qL9-6q-f4Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0p-Gi-DK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2091" y="802"/>
+        </scene>
+        <!--Tweet Detail View Controller-->
         <scene sceneID="Xkw-b9-gSq">
             <objects>
-                <viewController id="eH1-pX-5hD" sceneMemberID="viewController">
+                <viewController id="eH1-pX-5hD" customClass="STLTweetDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kvI-cP-9nc"/>
                         <viewControllerLayoutGuide type="bottom" id="4NS-Kf-WYn"/>
@@ -105,9 +125,34 @@
                     <view key="view" contentMode="scaleToFill" id="YHQ-Bi-Vlc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweet Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw9-8A-3TC">
+                                <rect key="frame" x="20" y="122" width="280" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweet time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4D-ta-2eK">
+                                <rect key="frame" x="20" y="305" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweeted by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1p-ao-jPG">
+                                <rect key="frame" x="20" y="334" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="IRP-Lv-fv3"/>
+                    <connections>
+                        <outlet property="tweet" destination="vw9-8A-3TC" id="Hji-as-OKo"/>
+                        <outlet property="tweetTime" destination="l4D-ta-2eK" id="3Qs-ce-851"/>
+                        <outlet property="tweetedBy" destination="c1p-ao-jPG" id="zHv-gh-JMR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0S-SF-Bbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
