@@ -24,7 +24,8 @@
     
 }
 
-@property UIImage *profilePic;
+@property (strong, nonatomic)UIRefreshControl *refreshControl;
+@property UIImage *pic;
 @property NSString *tweetText;
 @property NSString *tweetDate;
 @property NSString *tweetedBy;

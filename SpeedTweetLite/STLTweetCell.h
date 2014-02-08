@@ -17,6 +17,7 @@
 
 - (void)refreshCell;
 
+@property (nonatomic, strong) UIImage *pic;
 @property (nonatomic, strong) NSString *tweetText;
 @property (nonatomic, strong) NSString *username;
 

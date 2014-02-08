@@ -15,7 +15,7 @@
 @implementation STLMainViewController
 
 //synthasize variables
-@synthesize profilePic, tweetText, tweetDate, tweetedBy;
+@synthesize pic, tweetText, tweetDate, tweetedBy;
 
 
 - (void)viewDidLoad
@@ -190,6 +190,12 @@
         //Obtain user data
         NSDictionary *userDictionary = [tweetDictionary objectForKey:@"user"];
         if (userDictionary != nil) {
+            NSString *urlString = [userDictionary valueForKey:@"profile_image_url"];
+            NSURL *urlImage = [NSURL URLWithString:urlString];
+            NSData *imageData = [NSData dataWithContentsOfURL:urlImage];
+            self.pic = [UIImage imageWithData:imageData];
+            cell.pic = self.pic;
+            cell.imageView.image = self.pic;
             //Set text labe to username
             cell.username = [userDictionary valueForKey:@"name"];
         }
