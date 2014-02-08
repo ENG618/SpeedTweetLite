@@ -11,6 +11,8 @@
 @interface STLTweetDetailViewController : UIViewController
 
 
-@property NSDictionary *passedTweetDictionary;
+@property NSString *tText;
+@property NSString *tDate;
+@property NSString *tBy;
 
 @end

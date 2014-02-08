@@ -19,9 +19,19 @@
 //    __weak IBOutlet UILabel *twitterUsername;
     
     
+    UIAlertView *loadingAlert;
     NSArray *twitterFeed;
     
 }
+
+@property NSString *tweetText;
+@property NSString *tweetDate;
+@property NSString *tweetedBy;
+
+-(void)showLoading;
+-(void)dismissLoading;
+
 - (IBAction)newTweet:(id)sender;
+- (IBAction)refresh:(id)sender;
 
 @end

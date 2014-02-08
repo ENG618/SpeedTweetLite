@@ -14,6 +14,8 @@
 
 @implementation STLMainViewController
 
+@synthesize tweetText, tweetDate, tweetedBy;
+
 
 - (void)viewDidLoad
 {
@@ -24,6 +26,8 @@
     if (twitterCellNib != nil) {
         [tweetTableView registerNib:twitterCellNib forCellReuseIdentifier:@"TwitterCell"];
     }
+    //Show loading alertview
+    [self showLoading];
     
     //Initializing account access
     ACAccountStore *store = [[ACAccountStore alloc] init];
@@ -61,7 +65,10 @@
                                         twitterFeed = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
                                         if (twitterFeed != nil) {
                                             
-                                            [tweetTableView reloadData];
+                                            //[tweetTableView reloadData];
+                                            
+                                            [self dismissLoading];
+                                            
                                             NSLog(@"This is the twitter feed: %@", [twitterFeed description]);
                                             //NSLog(@"This is the first tweet: %@", [[twitterFeed objectAtIndex:0] description]);
                                         }
@@ -85,6 +92,35 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)showLoading
+{
+    //Activity indicator in status bar
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    //Loading alert view
+    loadingAlert = [[UIAlertView alloc] initWithTitle:@"Loading..."
+                                              message:@"\n\n"
+                                             delegate:self
+                                    cancelButtonTitle:nil
+                                    otherButtonTitles:nil, nil];
+    //Activity indicator
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    spinner.frame = CGRectMake(150.0f, 150.0f, 16.0f, 16.0f);
+    [loadingAlert addSubview:spinner];
+    [spinner startAnimating];
+    
+    [loadingAlert show];
+}
+
+-(void)dismissLoading
+{
+    //Stop status bar indicator
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    //Dismiss allertView
+    [loadingAlert dismissWithClickedButtonIndex:0 animated:YES];
+    
+    [tweetTableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -103,6 +139,14 @@
         [self presentViewController:composeVC animated:YES completion:nil];
         
     }
+}
+
+- (IBAction)refresh:(id)sender
+{
+    [self showLoading];
+    
+    [self dismissLoading];
+    
 }
 
 #pragma mark - Table view data source
@@ -154,10 +198,14 @@
     //Obtain data from a single tweet
     NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
     
+    tweetText = [tweetDictionary valueForKey:@"text"];
+    //tweetDate
+    
+    //Printing selected tweet info to console
     NSLog(@"This is the one you clicked on: %@", [tweetDictionary description]);
     
-    [self performSegueWithIdentifier:@"twitDic" sender:self];
-     }
+    [self performSegueWithIdentifier:@"tweetDescription" sender:self];
+}
      
     /*
      // Override to support conditional editing of the table view.
@@ -200,26 +248,30 @@
      
      
 #pragma mark - Navigation
-/*
+
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    STLTweetDetailViewController *tdvc = [segue destinationViewController];
+    
+    if ([segue.identifier isEqualToString:@"tweetDescription"]) {
+        
+    }
      // Get the new view controller using [segue destinationViewController].
-     STLTweetDetailViewController *tdvc = [segue destinationViewController];
-     // Pass the selected object to the new view controller.
-     NSIndexPath *path = [tweetTableView indexPathForSelectedRow];
+
     
     
 }
-*/
-/*
+
+
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    if ([]) {
-        <#statements#>
-    }
+    NSString *tweetDescription = @"tweetDescription";
+    if (identifier == tweetDescription) {
+        //STLTweetDetailViewController *tdvc =
+    };
     
 }
-*/
+
 
 @end

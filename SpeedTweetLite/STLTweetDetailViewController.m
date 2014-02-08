@@ -14,7 +14,7 @@
 
 @implementation STLTweetDetailViewController
 
-@synthesize passedTweetDictionary;
+@synthesize tText, tDate, tBy;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

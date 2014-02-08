@@ -10,6 +10,7 @@
 
 @interface STLTweetCell : UITableViewCell
 {
+    IBOutlet UIImageView *profilePic;
     IBOutlet UILabel *twitterText;
     IBOutlet UILabel *twitterUsername;
 }
