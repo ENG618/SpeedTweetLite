@@ -102,21 +102,18 @@
                                              delegate:self
                                     cancelButtonTitle:nil
                                     otherButtonTitles:nil, nil];
-    //Activity indicator
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    spinner.frame = CGRectMake(150.0f, 150.0f, 16.0f, 16.0f);
-    [loadingAlert addSubview:spinner];
-    [spinner startAnimating];
+    //Activity indicator in status bar
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     [loadingAlert show];
 }
 
 -(void)dismissLoading
 {
-    //Stop status bar indicator
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     //Dismiss allertView
     [loadingAlert dismissWithClickedButtonIndex:0 animated:YES];
+    //Stop status bar indicator
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
     [tweetTableView reloadData];
 }
@@ -143,8 +140,12 @@
 
 - (IBAction)refresh:(id)sender
 {
+    //Show loading alertView
     [self showLoading];
+
+    //Refresh code goes here
     
+    //Show loading alertView
     [self dismissLoading];
     
 }
