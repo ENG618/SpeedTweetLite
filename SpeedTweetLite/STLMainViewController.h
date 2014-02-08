@@ -10,6 +10,7 @@
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 #import "STLTweetDetailViewController.h"
+#import "STLProfileViewController.h"
 #import "STLTweet.h"
 
 @interface STLMainViewController : UITableViewController
@@ -26,6 +27,10 @@
 @property NSString *tweetText;
 @property NSString *tweetDate;
 @property NSString *tweetedBy;
+@property NSString *username;
+@property NSString *userDescription;
+@property NSNumber *followers;
+@property NSNumber *friends;
 
 -(void)showLoading;
 -(void)dismissLoading;

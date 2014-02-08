@@ -15,7 +15,15 @@
 @implementation STLMainViewController
 
 //synthasize variables
-@synthesize refreshControl, pic, tweetText, tweetDate, tweetedBy;
+@synthesize refreshControl,
+            pic,
+            tweetText,
+            tweetDate,
+            tweetedBy,
+            username,
+            userDescription,
+            friends,
+            followers;
 
 
 - (void)viewDidLoad
@@ -24,6 +32,8 @@
     
     
     refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
+    [refreshControl addTarget:self action:@selector(accessTwitter) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     
     [self accessTwitter];
@@ -146,18 +156,6 @@
     }
 }
 
-- (IBAction)refresh:(id)sender
-{
-    //Show loading alertView
-    [self showLoading];
-    
-    //Refresh code goes here
-    
-    //Show loading alertView
-    [self dismissLoading];
-    
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -214,20 +212,6 @@
     return nil;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    tweetText = nil;
-    //Obtain data from a single tweet
-    NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
-    tweetText = [tweetDictionary valueForKey:@"text"];
-    
-    
-    //Printing selected tweet info to console
-    NSLog(@"This is the one you clicked on: %@", [tweetDictionary description]);
-    
-//    [self performSegueWithIdentifier:@"tweetDescription" sender:self];
-}
-
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -273,22 +257,43 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    //Obtain the path for the selected row
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     //Obtain data from a single tweet
     NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:path.row];
-    tweetText = [tweetDictionary valueForKey:@"text"];
-    
+    NSDictionary *userDictionary = [tweetDictionary objectForKey:@"user"];
     if ([segue.identifier isEqualToString:@"tweetDescription"]) {
+        //Update variable with current selected tweet values
+        tweetText = [tweetDictionary valueForKey:@"text"];
+        tweetDate = [tweetDictionary valueForKey:@"created_at"];
+        tweetedBy = [userDictionary valueForKey:@"name"];
         // Get the new view controller using [segue destinationViewController].
         STLTweetDetailViewController *tdvc = [segue destinationViewController];
-        //Obtain path for selected row
+        //Pass objects
         tdvc.t = tweetText;
         tdvc.tTime = tweetDate;
         tdvc.tBy = tweetedBy;
         
         
+    }else if ([segue.identifier isEqualToString:@"profile"]){
+        //Update variables
+        tweetedBy = [userDictionary valueForKey:@"name"];
+        username = [userDictionary valueForKey:@"screen_name"];
+        userDescription = [userDictionary valueForKey:@"description"];
+        followers = [userDictionary valueForKey:@"followers_count"];
+        friends = [userDictionary valueForKey:@"friends_count"];
+        // Get the new view controller using [segue destinationViewController].
+        STLProfileViewController *pvc = [segue destinationViewController];
+        NSString *followersString = [followers stringValue];
+        NSString *friendsString = [friends stringValue];
+        //Pass objects
+        pvc.userName = tweetedBy;
+        pvc.userScreenname = username;
+        pvc.userDescription = userDescription;
+        pvc.userFollowers = followersString;//followersString;
+        pvc.userFriends = friendsString;//friendsString;
+        
     }
-    // Get the new view controller using [segue destinationViewController].
     
     
     

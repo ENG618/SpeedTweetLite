@@ -9,10 +9,22 @@
 #import "STLProfileViewController.h"
 
 @interface STLProfileViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *followersLabel;
+@property (weak, nonatomic) IBOutlet UILabel *friendsLabel;
+
 
 @end
 
 @implementation STLProfileViewController
+
+@synthesize userName,
+            userScreenname,
+            userDescription,
+            userFollowers,
+            userFriends;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +39,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //Format NSNumber to String
+//    NSString *followersString = [userFollowers stringValue];
+//    NSString *friendsString = [userFriends stringValue];
+    //Set label text
+    self.nameLabel.text = userName;
+    self.usernameLabel.text = userScreenname;
+    self.descriptionLabel.text = userDescription;
+    self.followersLabel.text = userFollowers;
+    self.friendsLabel.text = userFriends;
+    
 }
 
 
