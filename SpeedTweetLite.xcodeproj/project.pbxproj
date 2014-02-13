@@ -116,10 +116,18 @@
 			children = (
 				5C0AA9F118AC99A900F4C93D /* FriendsViewController.h */,
 				5C0AA9F218AC99A900F4C93D /* FriendsViewController.m */,
+				5C0AA9F818AD8CD300F4C93D /* Custom */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		5C0AA9F818AD8CD300F4C93D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
 				5C0AA9F518AC9AA200F4C93D /* FriendCell.h */,
 				5C0AA9F618AC9AA200F4C93D /* FriendCell.m */,
 			);
-			name = Friends;
+			name = Custom;
 			sourceTree = "<group>";
 		};
 		5C1BE9B518A4878600218596 /* Custom Cell */ = {

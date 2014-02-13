@@ -29,7 +29,7 @@
 	// Do any additional setup after loading the view.
     
     [self accessTwitter];
-
+    
 }
 
 - (void)accessTwitter
@@ -63,24 +63,31 @@
                                 [request setAccount:currentAccount];
                                 
                                 //response handler block
-                                //                                [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error){
-                                //                                    NSInteger responsCode = [urlResponse statusCode];
-                                //                                    if (responsCode == 200) {
-                                //                                        //Twitts in users feed
-                                //                                        twitterFeed = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
-                                //                                        if (twitterFeed != nil) {
-                                //
-                                //                                            //[tweetTableView reloadData];
-                                //
-                                //                                            [self dismissLoading];
-                                //                                        }
-                                //                                    }
-                                //                                }];
+                                [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error){
+                                    NSInteger responsCode = [urlResponse statusCode];
+                                    if (responsCode == 200) {
+                                        //Twitts in users feed
+                                        twitterFeed = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+                                        if (twitterFeed != nil) {
+                                            
+                                            //[tweetTableView reloadData];
+                                            
+                                            [self dismissLoading];
+                                        }
+                                    }
+                                }];
                             }
                         }
                     }
-                }else{ //If user denys access this block will be exicuted
+                }else{
+                    //If user denys access this block will be exicuted
                     NSLog(@"User denied access to accounts :(");
+                    
+                    //Alert user
+                    //Create alert
+                    UIAlertView *accessDenied = [[UIAlertView alloc] initWithTitle:@"Access Denied" message:@"You have denied access to Twitter and this app will not function.  Please visit the system settings to enagle access" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+                    //Show allert
+                    [accessDenied show];
                 }
             }];
         }

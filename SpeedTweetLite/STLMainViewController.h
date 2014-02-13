@@ -18,7 +18,7 @@
     IBOutlet UITableView *tweetTableView;
     
     UIAlertView *loadingAlert;
-    NSArray *twitterFeed;
+    NSMutableArray *twitterFeed;
     
 }
 

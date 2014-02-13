@@ -13,6 +13,7 @@
 @interface FriendsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {
     UIAlertView *loadingAlert;
+    NSMutableArray *twitterFeed;
 }
 
 - (void)accessTwitter;
