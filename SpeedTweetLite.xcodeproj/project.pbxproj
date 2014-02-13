@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C1BE9BA18A4A20B00218596 /* profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1BE9B918A4A20B00218596 /* profilePic.png */; };
 		5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BC18A60BBD00218596 /* STLTweet.m */; };
 		5C1BE9C018A60DCC00218596 /* STLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */; };
 		5C5725DC18A35DA700E58E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DB18A35DA700E58E1E /* Foundation.framework */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C1BE9B918A4A20B00218596 /* profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profilePic.png; path = ../../profilePic.png; sourceTree = "<group>"; };
 		5C1BE9BB18A60BBD00218596 /* STLTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLTweet.h; sourceTree = "<group>"; };
 		5C1BE9BC18A60BBD00218596 /* STLTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweet.m; sourceTree = "<group>"; };
 		5C1BE9BE18A60DCC00218596 /* STLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLProfileViewController.h; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 		5C5725E118A35DA700E58E1E /* SpeedTweetLite */ = {
 			isa = PBXGroup;
 			children = (
-				5C1BE9B918A4A20B00218596 /* profilePic.png */,
 				5C5725EA18A35DA700E58E1E /* AppDelegate.h */,
 				5C5725EB18A35DA700E58E1E /* AppDelegate.m */,
 				5C1BE9B618A4879E00218596 /* Speed Tweet Lite */,
@@ -273,7 +270,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C1BE9BA18A4A20B00218596 /* profilePic.png in Resources */,
 				5C5725F218A35DA700E58E1E /* Main_iPad.storyboard in Resources */,
 				5C5725F718A35DA700E58E1E /* Images.xcassets in Resources */,
 				5C5725EF18A35DA700E58E1E /* Main_iPhone.storyboard in Resources */,
@@ -442,6 +438,7 @@
 				GCC_PREFIX_HEADER = "SpeedTweetLite/SpeedTweetLite-Prefix.pch";
 				INFOPLIST_FILE = "SpeedTweetLite/SpeedTweetLite-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -455,6 +452,7 @@
 				GCC_PREFIX_HEADER = "SpeedTweetLite/SpeedTweetLite-Prefix.pch";
 				INFOPLIST_FILE = "SpeedTweetLite/SpeedTweetLite-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
