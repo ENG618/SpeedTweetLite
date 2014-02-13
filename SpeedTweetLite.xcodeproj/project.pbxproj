@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0AA9F318AC99A900F4C93D /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AA9F218AC99A900F4C93D /* FriendsViewController.m */; };
+		5C0AA9F718AC9AA200F4C93D /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AA9F618AC9AA200F4C93D /* FriendCell.m */; };
 		5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BC18A60BBD00218596 /* STLTweet.m */; };
 		5C1BE9C018A60DCC00218596 /* STLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */; };
 		5C5725DC18A35DA700E58E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DB18A35DA700E58E1E /* Foundation.framework */; };
@@ -40,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0AA9F118AC99A900F4C93D /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		5C0AA9F218AC99A900F4C93D /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		5C0AA9F518AC9AA200F4C93D /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		5C0AA9F618AC9AA200F4C93D /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 		5C1BE9BB18A60BBD00218596 /* STLTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLTweet.h; sourceTree = "<group>"; };
 		5C1BE9BC18A60BBD00218596 /* STLTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweet.m; sourceTree = "<group>"; };
 		5C1BE9BE18A60DCC00218596 /* STLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLProfileViewController.h; sourceTree = "<group>"; };
@@ -96,6 +102,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0AA9F018AC994A00F4C93D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5C1BE9BE18A60DCC00218596 /* STLProfileViewController.h */,
+				5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		5C0AA9F418AC99B900F4C93D /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				5C0AA9F118AC99A900F4C93D /* FriendsViewController.h */,
+				5C0AA9F218AC99A900F4C93D /* FriendsViewController.m */,
+				5C0AA9F518AC9AA200F4C93D /* FriendCell.h */,
+				5C0AA9F618AC9AA200F4C93D /* FriendCell.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
 		5C1BE9B518A4878600218596 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,17 +131,16 @@
 			name = "Custom Cell";
 			sourceTree = "<group>";
 		};
-		5C1BE9B618A4879E00218596 /* Speed Tweet Lite */ = {
+		5C1BE9B618A4879E00218596 /* Tweets */ = {
 			isa = PBXGroup;
 			children = (
 				5C57261618A368F400E58E1E /* STLMainViewController.h */,
 				5C57261718A368F400E58E1E /* STLMainViewController.m */,
 				5C57261C18A36A3800E58E1E /* STLTweetDetailViewController.h */,
 				5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */,
-				5C1BE9BE18A60DCC00218596 /* STLProfileViewController.h */,
-				5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */,
+				5C1BE9B518A4878600218596 /* Custom Cell */,
 			);
-			name = "Speed Tweet Lite";
+			name = Tweets;
 			sourceTree = "<group>";
 		};
 		5C5725CF18A35DA700E58E1E = {
@@ -155,10 +180,11 @@
 			children = (
 				5C5725EA18A35DA700E58E1E /* AppDelegate.h */,
 				5C5725EB18A35DA700E58E1E /* AppDelegate.m */,
-				5C1BE9B618A4879E00218596 /* Speed Tweet Lite */,
+				5C0AA9F418AC99B900F4C93D /* Friends */,
+				5C1BE9B618A4879E00218596 /* Tweets */,
+				5C0AA9F018AC994A00F4C93D /* Profile */,
 				5C5725ED18A35DA700E58E1E /* Main_iPhone.storyboard */,
 				5C5725F018A35DA700E58E1E /* Main_iPad.storyboard */,
-				5C1BE9B518A4878600218596 /* Custom Cell */,
 				5C5725F618A35DA700E58E1E /* Images.xcassets */,
 				5C5725E218A35DA700E58E1E /* Supporting Files */,
 			);
@@ -294,10 +320,12 @@
 			files = (
 				5C57261818A368F400E58E1E /* STLMainViewController.m in Sources */,
 				5C5725EC18A35DA700E58E1E /* AppDelegate.m in Sources */,
+				5C0AA9F318AC99A900F4C93D /* FriendsViewController.m in Sources */,
 				5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */,
 				5C1BE9C018A60DCC00218596 /* STLProfileViewController.m in Sources */,
 				5C5725E818A35DA700E58E1E /* main.m in Sources */,
 				5C57261E18A36A3800E58E1E /* STLTweetDetailViewController.m in Sources */,
+				5C0AA9F718AC9AA200F4C93D /* FriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

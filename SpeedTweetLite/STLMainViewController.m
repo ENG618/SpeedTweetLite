@@ -97,9 +97,6 @@
                                             //[tweetTableView reloadData];
                                             
                                             [self dismissLoading];
-                                            
-                                            NSLog(@"This is the twitter feed: %@", [twitterFeed description]);
-                                            //NSLog(@"This is the first tweet: %@", [[twitterFeed objectAtIndex:0] description]);
                                         }
                                     }
                                 }];
@@ -190,7 +187,7 @@
         // Configure the cell...
         //Obtain data from a single tweet
         NSDictionary *tweetDictionary = [twitterFeed objectAtIndex:indexPath.row];
-        NSLog(@"This is the tweetDictionary: %@", tweetDictionary);
+        //NSLog(@"This is the tweetDictionary: %@", tweetDictionary);
         if (tweetDictionary != nil) {
             //Set text lable to tweet
             tweetText = [tweetDictionary valueForKey:@"text"];
