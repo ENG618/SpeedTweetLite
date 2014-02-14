@@ -10,4 +10,7 @@
 
 @interface FiriendDetailsViewController : UIViewController
 
+@property (nonatomic) NSString *name;
+@property (nonatomic) UIImage *pic;
+
 @end

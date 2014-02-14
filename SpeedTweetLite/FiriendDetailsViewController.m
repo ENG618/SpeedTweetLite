@@ -10,10 +10,12 @@
 
 @interface FiriendDetailsViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *profileImg;
 
 @end
 
 @implementation FiriendDetailsViewController
+@synthesize name, pic;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +30,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //set labels
+    self.nameLabel.text = name;
+    self.profileImg.image = pic;
 }
 
 - (void)didReceiveMemoryWarning

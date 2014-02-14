@@ -19,6 +19,7 @@
     NSDictionary *twitterFeed;
     NSArray *tempArray;
     NSMutableArray *friendsList;
+    FiriendDetailsViewController *dvc;
 }
 
 - (void)accessTwitter;

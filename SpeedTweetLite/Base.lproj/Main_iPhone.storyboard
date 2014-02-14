@@ -415,6 +415,7 @@
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="lBt-ZB-V4t" id="3nM-jP-Fz3"/>
+                        <outlet property="profileImg" destination="ZHH-HL-n1q" id="i6y-AK-Pjh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOV-wW-czQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

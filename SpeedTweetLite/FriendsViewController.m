@@ -83,10 +83,11 @@
                                                 NSString *username = [[tempArray objectAtIndex:i]objectForKey:@"screen_name"];
                                                 //Obtain user pic
                                                 NSString *picURL = [[tempArray objectAtIndex:i]objectForKey:@"profile_image_url"];
-                                                NSURL *urlImage = [NSURL URLWithString:picURL];
+                                                NSString *largeImgURL = [picURL stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
+                                                NSURL *urlImage = [NSURL URLWithString:largeImgURL];
                                                 NSData *imageData = [NSData dataWithContentsOfURL:urlImage];
                                                 
-                                                NSLog(@"username: %@", username);
+                                                //NSLog(@"username: %@", username);
                                                 
                                                 Friend *aFriend = [[Friend alloc] initWithData:username profileImg:[UIImage imageWithData:imageData]];
                                                 [friendsList addObject:aFriend];
@@ -103,7 +104,11 @@
                                 }];
                             }else{
                                 //Create allert if there is no connection availible
-                                UIAlertView *noConnection = [[UIAlertView alloc] initWithTitle:@"No Connection" message:@"There seems to be no data connection.  Please check to make sure you are connected to the internet." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+                                UIAlertView *noConnection = [[UIAlertView alloc] initWithTitle:@"No Connection"
+                                                                                       message:@"There seems to be no data connection.  Please check to make sure you are connected to the internet."
+                                                                                      delegate:nil
+                                                                             cancelButtonTitle:nil
+                                                                             otherButtonTitles:@"Okay", nil];
                                 //Show alert
                                 [noConnection show];
                             }
@@ -180,13 +185,18 @@
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    // Get the new view controller using [segue destinationViewController].
+    dvc = [segue destinationViewController];
+    NSArray *indexPaths = [self.friendsCollectionView indexPathsForSelectedItems];
+    NSIndexPath *index = [indexPaths objectAtIndex:0];
+    
+    Friend *current = [friendsList objectAtIndex:index.row];
+    NSLog(@"Friend name: %@", current.friendName);
+    dvc.name = current.friendName;
+    dvc.pic = current.profilePic;
+
     
 }
 
