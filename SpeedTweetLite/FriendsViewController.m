@@ -9,6 +9,8 @@
 #import "FriendsViewController.h"
 
 @interface FriendsViewController ()
+@property (weak, nonatomic) IBOutlet UICollectionView *friendsCollectionView;
+
 
 @end
 
@@ -34,6 +36,9 @@
 
 - (void)accessTwitter
 {
+    //Show loading dialog
+    [self showLoading];
+    
     //Initializing account access
     ACAccountStore *store = [[ACAccountStore alloc] init];
     if (store != nil) {
@@ -47,7 +52,7 @@
                     //Grab all the associated accounts (twitter accounts)
                     NSArray *accounts = [store accountsWithAccountType:type];
                     if (accounts != nil) {
-                        NSLog(@"The accounts on the simulator is/are: %@", accounts);
+                        //NSLog(@"The accounts on the simulator is/are: %@", accounts);
                         //Grab current account
                         ACAccount *currentAccount = [accounts objectAtIndex:0];
                         if (currentAccount != nil) {
@@ -57,7 +62,7 @@
                             NSString *friendString = @"https://api.twitter.com/1.1/friends/list.json?cursor=-1&skip_status=true&include_user_entities=false";
                             
                             //Request data from Twitter
-                            SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:friendString ] parameters:nil];
+                            SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:friendString] parameters:nil];
                             if (request != nil) {
                                 //1.1 api requires a user to be logged in
                                 [request setAccount:currentAccount];
@@ -69,9 +74,18 @@
                                         //Twitts in users feed
                                         twitterFeed = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
                                         if (twitterFeed != nil) {
+                                            NSLog(@"This is the current feed: %@", twitterFeed);
                                             
-                                            //[tweetTableView reloadData];
                                             
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            //Roload Collection View with updated objects
+                                            [self.friendsCollectionView reloadData];
+                                            
+                                            //Dismiss loding dialog
                                             [self dismissLoading];
                                         }
                                     }
@@ -80,12 +94,13 @@
                         }
                     }
                 }else{
-                    //If user denys access this block will be exicuted
-                    NSLog(@"User denied access to accounts :(");
-                    
-                    //Alert user
+                    //User denied access to twitter...Alert user
                     //Create alert
-                    UIAlertView *accessDenied = [[UIAlertView alloc] initWithTitle:@"Access Denied" message:@"You have denied access to Twitter and this app will not function.  Please visit the system settings to enagle access" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+                    UIAlertView *accessDenied = [[UIAlertView alloc] initWithTitle:@"Access Denied"
+                                                                           message:@"You have denied access to Twitter and this app will not function.  Please visit the system settings to enagle access"
+                                                                          delegate:nil
+                                                                 cancelButtonTitle:nil
+                                                                 otherButtonTitles:@"Okay", nil];
                     //Show allert
                     [accessDenied show];
                 }
@@ -100,7 +115,7 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     //Loading alert view
     loadingAlert = [[UIAlertView alloc] initWithTitle:@"Loading..."
-                                              message:@"Please wait while we gather your tweets."
+                                              message:@"Please wait while we find your firends"
                                              delegate:self
                                     cancelButtonTitle:nil
                                     otherButtonTitles:nil, nil];

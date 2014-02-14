@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C0AA9F318AC99A900F4C93D /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AA9F218AC99A900F4C93D /* FriendsViewController.m */; };
 		5C0AA9F718AC9AA200F4C93D /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AA9F618AC9AA200F4C93D /* FriendCell.m */; };
+		5C0AA9FB18ADAF3000F4C93D /* FiriendDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AA9FA18ADAF3000F4C93D /* FiriendDetailsViewController.m */; };
 		5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BC18A60BBD00218596 /* STLTweet.m */; };
 		5C1BE9C018A60DCC00218596 /* STLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1BE9BF18A60DCC00218596 /* STLProfileViewController.m */; };
 		5C5725DC18A35DA700E58E1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5725DB18A35DA700E58E1E /* Foundation.framework */; };
@@ -29,6 +30,7 @@
 		5C57261E18A36A3800E58E1E /* STLTweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */; };
 		5C57262518A36D3200E58E1E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C57262418A36D3200E58E1E /* Accounts.framework */; };
 		5C57262718A36D3C00E58E1E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C57262618A36D3C00E58E1E /* Social.framework */; };
+		5CFEB15618ADBBCD00529A96 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFEB15518ADBBCD00529A96 /* Friend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		5C0AA9F218AC99A900F4C93D /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		5C0AA9F518AC9AA200F4C93D /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
 		5C0AA9F618AC9AA200F4C93D /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		5C0AA9F918ADAF3000F4C93D /* FiriendDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiriendDetailsViewController.h; sourceTree = "<group>"; };
+		5C0AA9FA18ADAF3000F4C93D /* FiriendDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiriendDetailsViewController.m; sourceTree = "<group>"; };
 		5C1BE9BB18A60BBD00218596 /* STLTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLTweet.h; sourceTree = "<group>"; };
 		5C1BE9BC18A60BBD00218596 /* STLTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweet.m; sourceTree = "<group>"; };
 		5C1BE9BE18A60DCC00218596 /* STLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLProfileViewController.h; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		5C57261D18A36A3800E58E1E /* STLTweetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLTweetDetailViewController.m; sourceTree = "<group>"; };
 		5C57262418A36D3200E58E1E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		5C57262618A36D3C00E58E1E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		5CFEB15418ADBBCD00529A96 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		5CFEB15518ADBBCD00529A96 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,8 @@
 			children = (
 				5C0AA9F118AC99A900F4C93D /* FriendsViewController.h */,
 				5C0AA9F218AC99A900F4C93D /* FriendsViewController.m */,
+				5C0AA9F918ADAF3000F4C93D /* FiriendDetailsViewController.h */,
+				5C0AA9FA18ADAF3000F4C93D /* FiriendDetailsViewController.m */,
 				5C0AA9F818AD8CD300F4C93D /* Custom */,
 			);
 			name = Friends;
@@ -126,6 +134,8 @@
 			children = (
 				5C0AA9F518AC9AA200F4C93D /* FriendCell.h */,
 				5C0AA9F618AC9AA200F4C93D /* FriendCell.m */,
+				5CFEB15418ADBBCD00529A96 /* Friend.h */,
+				5CFEB15518ADBBCD00529A96 /* Friend.m */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -327,10 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C57261818A368F400E58E1E /* STLMainViewController.m in Sources */,
+				5CFEB15618ADBBCD00529A96 /* Friend.m in Sources */,
 				5C5725EC18A35DA700E58E1E /* AppDelegate.m in Sources */,
 				5C0AA9F318AC99A900F4C93D /* FriendsViewController.m in Sources */,
 				5C1BE9BD18A60BBD00218596 /* STLTweet.m in Sources */,
 				5C1BE9C018A60DCC00218596 /* STLProfileViewController.m in Sources */,
+				5C0AA9FB18ADAF3000F4C93D /* FiriendDetailsViewController.m in Sources */,
 				5C5725E818A35DA700E58E1E /* main.m in Sources */,
 				5C57261E18A36A3800E58E1E /* STLTweetDetailViewController.m in Sources */,
 				5C0AA9F718AC9AA200F4C93D /* FriendCell.m in Sources */,

@@ -59,11 +59,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Buttons
-
-- (IBAction)dismissProfile:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 @end
