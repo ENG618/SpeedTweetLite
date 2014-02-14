@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
+#import "FiriendDetailsViewController.h"
+#import "FriendCell.h"
+#import "Friend.h"
 
 @interface FriendsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {

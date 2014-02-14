@@ -9,6 +9,7 @@
 #import "FiriendDetailsViewController.h"
 
 @interface FiriendDetailsViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
 
@@ -33,6 +34,9 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)doneButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

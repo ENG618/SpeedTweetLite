@@ -75,12 +75,9 @@
                                         twitterFeed = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
                                         if (twitterFeed != nil) {
                                             NSLog(@"This is the current feed: %@", twitterFeed);
-                                            
+                                            NSLog(@"twitterFeed has %d objects in it", [twitterFeed count]);
                                             //Instanciate friends aray
-                                            //friendsList = [twitterFeed ];
-                                            
-                                            
-                                            
+                                            //self.friendsList = [twitterFeed object];
                                             
                                             //Roload Collection View with updated objects
                                             [self.friendsCollectionView reloadData];
@@ -144,15 +141,19 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    if (twitterFeed != nil) {
+        return [twitterFeed count];
+    }
+    return 0;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"friendCell" forIndexPath:indexPath];
+    FriendCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"friendCell" forIndexPath:indexPath];
     if (cell != nil) {
-        
+        //Configure Cell
+        //obtain data from a single
     }
     
     
