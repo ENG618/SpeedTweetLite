@@ -101,6 +101,11 @@
                                         }
                                     }
                                 }];
+                            }else{
+                                //Create allert if there is no connection availible
+                                UIAlertView *noConnection = [[UIAlertView alloc] initWithTitle:@"No Connection" message:@"There seems to be no data connection.  Please check to make sure you are connected to the internet." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+                                //Show alert
+                                [noConnection show];
                             }
                         }
                     }
@@ -173,6 +178,16 @@
         }
     }
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
 }
 
 @end

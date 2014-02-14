@@ -35,6 +35,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Buttons
+
 - (IBAction)doneButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
