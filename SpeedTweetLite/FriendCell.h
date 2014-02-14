@@ -10,4 +10,10 @@
 
 @interface FriendCell : UICollectionViewCell
 
+
+@property (strong, nonatomic) IBOutlet UIImageView *friendImage;
+@property (strong, nonatomic) IBOutlet UILabel *friendLabel;
+
+- (void)resetWithLable:(NSString*)labelText cellImage:(UIImage*)cellImage;
+
 @end

@@ -76,8 +76,8 @@
                                         if (twitterFeed != nil) {
                                             NSLog(@"This is the current feed: %@", twitterFeed);
                                             
-                                            
-                                            
+                                            //Instanciate friends aray
+                                            //friendsList = [twitterFeed ];
                                             
                                             
                                             

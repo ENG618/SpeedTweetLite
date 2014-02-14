@@ -14,6 +14,7 @@
 {
     UIAlertView *loadingAlert;
     NSMutableArray *twitterFeed;
+    NSMutableArray *friendsList;
 }
 
 - (void)accessTwitter;

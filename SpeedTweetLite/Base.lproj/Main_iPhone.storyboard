@@ -324,7 +324,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="friendCell" id="zgw-as-bpp">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="friendCell" id="zgw-as-bpp" customClass="FriendCell">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -349,6 +349,8 @@
                                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="155" height="155"/>
                                         <connections>
+                                            <outlet property="friendImage" destination="x1a-kC-gKp" id="FBo-nq-3WI"/>
+                                            <outlet property="friendLabel" destination="Ixa-hn-kHZ" id="PPf-LT-yar"/>
                                             <segue destination="ZSO-jK-Idl" kind="modal" modalTransitionStyle="partialCurl" id="OKn-0h-8ne"/>
                                         </connections>
                                     </collectionViewCell>

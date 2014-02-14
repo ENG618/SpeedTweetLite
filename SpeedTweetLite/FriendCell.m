@@ -19,6 +19,12 @@
     return self;
 }
 
+- (void)resetWithLable:(NSString*)labelText cellImage:(UIImage*)cellImage
+{
+    self.friendImage.image = cellImage;
+    self.friendLabel.text = labelText;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
