@@ -16,4 +16,6 @@
 @property (nonatomic) UIImage *profilePic;
 @property (nonatomic) NSString *friendName;
 
+- (id)initWithData:(NSString*)friendText profileImg:(UIImage*)profileImg;
+
 @end

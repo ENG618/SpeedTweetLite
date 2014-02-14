@@ -56,9 +56,6 @@
                         //Grab current account
                         ACAccount *currentAccount = [accounts objectAtIndex:0];
                         if (currentAccount != nil) {
-                            //Obtaining user time line
-                            //NSString *userTimeString  = @"https://api.twitter.com/1.1/statuses/user_timeline.json";
-                            
                             NSString *friendString = @"https://api.twitter.com/1.1/friends/list.json?cursor=-1&skip_status=true&include_user_entities=false";
                             
                             //Request data from Twitter
@@ -76,8 +73,25 @@
                                         if (twitterFeed != nil) {
                                             NSLog(@"This is the current feed: %@", twitterFeed);
                                             NSLog(@"twitterFeed has %d objects in it", [twitterFeed count]);
-                                            //Instanciate friends aray
-                                            //self.friendsList = [twitterFeed object];
+                                            //Access users in dictionary
+                                            tempArray = [twitterFeed objectForKey:@"users"];
+                                            //Create friends array
+                                            friendsList = [[NSMutableArray alloc] init];
+                                            
+                                            for (int i=0; i<[tempArray count]; i++) {
+                                                //Obtain username
+                                                NSString *username = [[tempArray objectAtIndex:i]objectForKey:@"screen_name"];
+                                                //Obtain user pic
+                                                NSString *picURL = [[tempArray objectAtIndex:i]objectForKey:@"profile_image_url"];
+                                                NSURL *urlImage = [NSURL URLWithString:picURL];
+                                                NSData *imageData = [NSData dataWithContentsOfURL:urlImage];
+                                                
+                                                NSLog(@"username: %@", username);
+                                                
+                                                Friend *aFriend = [[Friend alloc] initWithData:username profileImg:[UIImage imageWithData:imageData]];
+                                                [friendsList addObject:aFriend];
+                                                
+                                            }
                                             
                                             //Roload Collection View with updated objects
                                             [self.friendsCollectionView reloadData];
@@ -142,7 +156,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if (twitterFeed != nil) {
-        return [twitterFeed count];
+        return [tempArray count];
     }
     return 0;
 }

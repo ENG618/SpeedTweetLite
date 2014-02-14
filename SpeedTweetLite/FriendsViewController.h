@@ -16,7 +16,8 @@
 @interface FriendsViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {
     UIAlertView *loadingAlert;
-    NSMutableArray *twitterFeed;
+    NSDictionary *twitterFeed;
+    NSArray *tempArray;
     NSMutableArray *friendsList;
 }
 

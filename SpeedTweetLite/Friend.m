@@ -9,5 +9,14 @@
 #import "Friend.h"
 
 @implementation Friend
+@synthesize profilePic, friendName;
+
+- (id)initWithData:(NSString*)friendText profileImg:(UIImage*)profileImg
+{
+    self.friendName = friendText;
+    self.profilePic = profileImg;
+    
+    return self;
+}
 
 @end
