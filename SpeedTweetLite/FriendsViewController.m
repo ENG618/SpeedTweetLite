@@ -155,8 +155,8 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if (twitterFeed != nil) {
-        return [tempArray count];
+    if (friendsList != nil) {
+        return [friendsList count];
     }
     return 0;
 }
@@ -164,13 +164,14 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Configure Cell
     FriendCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"friendCell" forIndexPath:indexPath];
     if (cell != nil) {
-        //Configure Cell
-        //obtain data from a single
+        if (friendsList != nil) {
+            Friend *current = [friendsList objectAtIndex:indexPath.row];
+            [cell resetWithLable:[current friendName] cellImage:[current profilePic]];
+        }
     }
-    
-    
     return cell;
 }
 
